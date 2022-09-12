@@ -47,14 +47,16 @@ async function onNavItemClicked(e) {
     }
 
     await storage.save("status", target.dataset.duration);
+    await message.send({ active: true });
 
     power.keepAwake();
   } else {
     switch (target.id) {
       case "deactivate":
-        power.releaseKeepAwake();
         await alarm.clear("alarm");
         await storage.clear("status");
+        await message.send({ active: false });
+        power.releaseKeepAwake();
         break;
     }
   }
@@ -70,8 +72,6 @@ async function displayRunningAlarm() {
   let groupEl = document.getElementById("runningAlarm");
   let status = await storage.load("status", null);
   let alarmObj = await alarm.get("alarm");
-
-  console.log(alarmObj);
 
   if (alarmObj || status === "infinite") {
     let durationEl = document.getElementById("duration");
