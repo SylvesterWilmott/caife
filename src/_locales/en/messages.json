@@ -1,0 +1,53 @@
+{
+  "ext_name": {
+    "message": "Caife: Keep Your Display Awake"
+  },
+  "ext_description": {
+    "message": "Override your display sleep settings."
+  },
+  "keep_awake": {
+    "message": "Keep Awake"
+  },
+  "deactivate": {
+    "message": "Deactivate"
+  },
+  "duration_indefinitely": {
+    "message": "Indefinitely"
+  },
+  "duration_10m": {
+    "message": "10 minutes"
+  },
+  "duration_30m": {
+    "message": "30 minutes"
+  },
+  "duration_60m": {
+    "message": "1 hour"
+  },
+  "duration_120m": {
+    "message": "2 hours"
+  },
+  "duration_240m": {
+    "message": "4 hours"
+  },
+  "duration_480m": {
+    "message": "8 hours"
+  },
+  "duration_cancel": {
+    "message": "Cancel"
+  },
+  "hours": {
+    "message": "hours"
+  },
+  "hours_singular": {
+    "message": "hour"
+  },
+  "minutes": {
+    "message": "minutes"
+  },
+  "minutes_singular": {
+    "message": "minute"
+  },
+  "remaining": {
+    "message": "remaining"
+  }
+}

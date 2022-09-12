@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/popup.css" />
+    <script type="module" src="../js/popup.js"></script>
+  </head>
+  <body>
+    <ul id="runningAlarm" class="list current-alarm">
+      <li id="duration" class="item disabled"></li>
+      <li id="deactivate" class="item nav-index" data-localize="deactivate">Deactivate</li>
+    </ul>
+    <ul class="list">
+      <li class="item disabled" data-localize="keep_awake">Keep Awake</li>
+      <li class="item nav-index" data-duration="infinite" data-localize="duration_indefinitely">Indefinitely</li>
+      <li class="item nav-index" data-duration="1" data-localize="duration_10m">10 minutes</li>
+      <li class="item nav-index" data-duration="30" data-localize="duration_30m">30 minutes</li>
+      <li class="item nav-index" data-duration="60" data-localize="duration_60m">1 hour</li>
+      <li class="item nav-index" data-duration="120" data-localize="duration_120m">2 hours</li>
+      <li class="item nav-index" data-duration="240" data-localize="duration_240m">4 hours</li>
+      <li class="item nav-index" data-duration="480" data-localize="duration_480m">8 hours</li>
+    </ul>
+  </body>
+</html>
