@@ -13,7 +13,7 @@ let navIndex; // Current navigation index
 document.addEventListener("DOMContentLoaded", init);
 
 async function init() {
-  await displayRunningAlarm();
+  await displayTimeLeft();
   setupNavigation();
   setupListeners();
   i18n.localize();
@@ -70,7 +70,7 @@ function createAlarm(duration) {
   alarm.create("alarm", parseInt(duration));
 }
 
-async function displayRunningAlarm() {
+async function displayTimeLeft() {
   let groupEl = document.getElementById("runningAlarm");
   let status = await storage.load("status", null);
   let alarmObj = await alarm.get("alarm");
