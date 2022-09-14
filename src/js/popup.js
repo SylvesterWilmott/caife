@@ -42,7 +42,9 @@ async function onNavItemClicked(e) {
   let target = e.target;
 
   if (target.hasAttribute("data-duration")) {
-    if (target.dataset.duration !== "infinite") {
+    if (target.dataset.duration === "infinite") {
+      await alarm.clear("alarm");
+    } else {
       createAlarm(target.dataset.duration);
     }
 
