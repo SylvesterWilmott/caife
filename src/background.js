@@ -1,9 +1,11 @@
 "use strict";
 
 import * as storage from "./js/storage.js";
+import * as alarm from "./js/alarm.js";
 import * as power from "./js/power.js";
 
 chrome.alarms.onAlarm.addListener(onAlarmComplete);
+chrome.runtime.onInstalled.addListener(onStartup);
 chrome.runtime.onStartup.addListener(onStartup);
 chrome.runtime.onMessage.addListener(onPopupMessage);
 
@@ -32,8 +34,9 @@ function onPopupMessage(message, sender, sendResponse) {
 }
 
 async function clearAlarmAndStorage() {
-  await storage.clear("status");
   power.releaseKeepAwake();
+  await alarm.clear("alarm");
+  await storage.clear("status");
 }
 
 function updateIcon(status) {
